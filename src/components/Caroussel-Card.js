@@ -1,21 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const CarousselCard = () => {
-  const [cellsRange, setCellsRange] = useState(9);
-  /*   let cellWidth = 400; */
+  const [cellsRange, setCellsRange] = useState("9");
+
   let carousel = document.getElementsByClassName("carousel");
   console.log("caroussel", carousel);
-  console.log("test", carousel[0]?.offsetWidth);
+
   let cells = document.getElementsByClassName("carousel__cell");
-  console.log("cells", cells);
+  /*   console.log("cells", cells); */
   let cellCount;
   let selectedIndex = 0;
   let cellWidth = carousel[0]?.offsetWidth;
-
+  console.log("test", carousel[0]?.offsetWidth);
   let cellHeight = carousel[0]?.offsetHeight;
-  console.log("taille", cellWidth, cellHeight);
-  let isHorizontal = true;
-  let rotateFn = isHorizontal ? "rotateY" : "rotateX";
+
+  let rotateFn = "rotateY";
   let radius, theta;
 
   function rotateCarousel() {
@@ -28,18 +27,22 @@ const CarousselCard = () => {
     theta = 360 / cellsRange;
     var cellSize = cellWidth;
     radius = Math.round(cellSize / 2 / Math.tan(Math.PI / cellsRange));
+    console.log("coucou " + cellWidth);
+
     for (var i = 0; i < cells.length; i++) {
+      /*  console.log("cells", cells[i]); */
       var cell = cells[i];
       if (i < cellsRange) {
-        console.log("nombre", cellsRange);
         // visible cell
+
         cell.style.opacity = 1;
         var cellAngle = theta * i;
         cell.style.transform =
           rotateFn + "(" + cellAngle + "deg) translateZ(" + radius + "px)";
+        /*    console.log("transf", cellAngle, radius); */
       } else {
         // hidden cell
-        console.log("disp", cell.style.opacity);
+
         cell.style.opacity = 0;
         cell.style.transform = "none";
       }
@@ -48,9 +51,19 @@ const CarousselCard = () => {
     rotateCarousel();
   }
 
+  useEffect(() => {
+    setCellsRange(9);
+    changeCarousel();
+  }, []);
+
   return (
     <div>
-      <div className="scene">
+      <div
+        className="scene"
+        onMouseMove={(event) => {
+          console.log(event);
+        }}
+      >
         <div className="carousel">
           <div className="carousel__cell">1</div>
           <div className="carousel__cell">2</div>
@@ -81,7 +94,7 @@ const CarousselCard = () => {
               value={cellsRange}
               onChange={(event) => {
                 setCellsRange(event.target.value);
-                selectedIndex--;
+
                 changeCarousel();
               }}
             />
@@ -100,6 +113,7 @@ const CarousselCard = () => {
           <button
             className="next-button"
             onClick={() => {
+              console.log("hello");
               selectedIndex++;
               changeCarousel();
             }}
