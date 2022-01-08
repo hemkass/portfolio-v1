@@ -1,0 +1,79 @@
+[
+  {
+    "ID": 1,
+    "TITLE": "GAMEPAD",
+    "FRONT": "https://my-gamepad.netlify.app/",
+    "BACK": "https://github.com/hemkass/Gamepad-backend",
+    "TECHNOLOGIES": [
+      { "name": "NodeJS" },
+      { "name": "MongoDB" },
+      { "name": "CSS" },
+
+      { "name": "REACT" },
+      { "name": "JSX" }
+    ],
+    "PICTURE": "https://res.cloudinary.com/dyj84szrx/image/upload/v1641566681/Mon%20site/PORTFOLIO/ScreenshotGamepad_eu0esa.png"
+  },
+
+  {
+    "ID": 2,
+    "TITLE": "VINTED",
+    "FRONT": "https://my-vinted-app.netlify.app/",
+    "BACK": "https://github.com/hemkass/myVintedApp",
+    "TECHNOLOGIES": [
+      { "name": "NodeJS" },
+      { "name": "MongoDB" },
+      { "name": "CSS" },
+
+      { "name": "REACT" },
+      { "name": "JSX" }
+    ],
+    "PICTURE": "https://res.cloudinary.com/dyj84szrx/image/upload/v1641566682/Mon%20site/PORTFOLIO/ScreenshotVinted_gxoxf3.png"
+  },
+
+  {
+    "ID": 3,
+    "TITLE": "MARVEL",
+    "FRONT": "https://my-marvel-app.netlify.app/",
+    "BACK": "https://github.com/hemkass/MarvelBack",
+    "TECHNOLOGIES": [
+      { "name": "MongoDB" },
+      { "name": "NodeJS" },
+      { "name": "CSS" },
+
+      { "name": "REACT" },
+      { "name": "JSX" }
+    ],
+    "PICTURE": "https://res.cloudinary.com/dyj84szrx/image/upload/v1641566681/Mon%20site/PORTFOLIO/ScreenshotMArvel_kntva4.png"
+  },
+
+  {
+    "ID": 4,
+    "TITLE": "DELIVROO",
+    "FRONT": "add-to-cart-food.netlify.app",
+    "BACK": "",
+    "TECHNOLOGIES": [
+      { "name": "CSS" },
+      { "name": "HTML" },
+      { "name": "REACT" },
+      { "name": "JSX" }
+    ],
+    "PICTURE": "https://res.cloudinary.com/dyj84szrx/image/upload/v1641566680/Mon%20site/PORTFOLIO/Cart-delivroo_fpea1d.png"
+  },
+
+  {
+    "ID": 5,
+    "TITLE": "TRIP ADVISOR",
+    "FRONT": "https://my-trip-adv.netlify.app/",
+    "BACK": "https://github.com/hemkass/TripAdvisor-back-end",
+    "TECHNOLOGIES": [
+      { "name": "NodeJS" },
+      { "name": "CSS" },
+
+      { "name": "REACT" },
+      { "name": "JSX" },
+      { "name": "VanillaJs" }
+    ],
+    "PICTURE": "https://res.cloudinary.com/dyj84szrx/image/upload/v1641566681/Mon%20site/PORTFOLIO/ScreenshotTRIP_lj4fmn.png"
+  }
+]

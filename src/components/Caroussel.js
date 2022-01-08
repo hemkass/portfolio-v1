@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import CarousselCard from "./Caroussel-Card";
+import carouselJson from "../Media/carousel.json";
 
 const Caroussel = () => {
-  const [cellsRange, setCellsRange] = useState("9");
+  const [cellsRange, setCellsRange] = useState("4");
 
   let carousel = document.getElementsByClassName("carousel");
   console.log("caroussel", carousel);
@@ -52,10 +54,10 @@ const Caroussel = () => {
   }
 
   useEffect(() => {
-    setCellsRange(9);
+    setCellsRange(4);
     changeCarousel();
   }, []);
-
+  console.log("test2", carouselJson);
   return (
     <div className="caroussel-global">
       <div className="caroussel-box">
@@ -72,28 +74,35 @@ const Caroussel = () => {
             alt="next button"
           ></img>
         </div>
-        <div
-          className="scene"
-          onMouseMove={(event) => {
-            console.log(event);
-          }}
-        >
-          <div className="carousel">
-            <div className="carousel__cell">1</div>
-            <div className="carousel__cell">2</div>
-            <div className="carousel__cell">3</div>
-            <div className="carousel__cell">4</div>
-            <div className="carousel__cell">5</div>
-            <div className="carousel__cell">6</div>
-            <div className="carousel__cell">7</div>
-            <div className="carousel__cell">8</div>
-            <div className="carousel__cell">9</div>
-            <div className="carousel__cell">10</div>
-            <div className="carousel__cell">11</div>
-            <div className="carousel__cell">12</div>
-            <div className="carousel__cell">13</div>
-            <div className="carousel__cell">14</div>
-            <div className="carousel__cell">15</div>
+        <div className="middle-content">
+          <div className="carousel-options">
+            <div>
+              <label>
+                <p>Nombre de faces :</p>
+                <input
+                  className="cells-range"
+                  type="range"
+                  min="3"
+                  max="5"
+                  value={cellsRange}
+                  onChange={(event) => {
+                    setCellsRange(event.target.value);
+
+                    changeCarousel();
+                  }}
+                />
+              </label>
+            </div>
+          </div>
+          <div
+            className="scene"
+            onMouseMove={(event) => {
+              console.log(event);
+            }}
+          >
+            <div className="carousel">
+              <CarousselCard />
+            </div>
           </div>
         </div>
 
@@ -109,22 +118,6 @@ const Caroussel = () => {
             alt="next button"
           ></img>
         </div>
-      </div>
-      <div className="carousel-options">
-        <p>
-          <input
-            className="cells-range"
-            type="range"
-            min="3"
-            max="15"
-            value={cellsRange}
-            onChange={(event) => {
-              setCellsRange(event.target.value);
-
-              changeCarousel();
-            }}
-          />
-        </p>
       </div>
     </div>
   );

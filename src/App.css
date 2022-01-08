@@ -8,13 +8,41 @@ body {
 }
 
 h1 {
+  color: #ccbdbd;
   font-family: "Cormorant Garamond", serif;
+  font-size: 0.8em;
+  text-shadow: 1px 3px 7px 2px rgba(24, 23, 23, 0.4);
 }
+
 h2 {
-  font-family: "Titillium Web", sans-serif;
+  /* font-family: "Titillium Web", sans-serif; */
+  font-family: "Cormorant Garamond", serif;
+  font-size: 100px;
 }
+
+h3 {
+  font-family: "Titillium Web", sans-serif;
+  padding-top: 10px;
+  font-size: 50px;
+}
+
 p {
   font-family: "Habibi", serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 300;
+}
+
+h4 {
+  font-family: "Habibi", serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 
 .caroussel-box {
@@ -25,18 +53,18 @@ p {
 }
 
 .caroussel-box .caroussel-left {
-  background-color: royalblue;
+  /*  background-color: royalblue; */
   margin-right: 150px;
   height: 500px;
-  width: 20vw;
+  width: 25vw;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 .caroussel-box .caroussel-right {
   height: 500px;
-  width: 20vw;
-  background-color: royalblue;
+  width: 25vw;
+  /*   background-color: royalblue; */
   margin-left: 150px;
   display: flex;
   align-items: center;
@@ -59,26 +87,33 @@ img.caroussel:hover {
 }
 .scene {
   /* border: 1px solid #ccc; */
-  margin: 40px 0;
+  /*   margin: 40px 0; */
   position: relative;
   width: 25vw;
   height: 500px;
-  margin: 80px auto;
+  margin: 0px auto;
   perspective: 1000px;
+}
+
+.middle-content {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .carousel {
   width: 100%;
   height: 100%;
   position: absolute;
-  transform: translateZ(-288px);
+  transform: translateZ(-360px);
   transform-style: preserve-3d;
   transition: transform 1s;
 }
 
 .carousel__cell {
   position: absolute;
-  width: 330px;
+  width: 360px;
   height: 500px;
   left: 10px;
   top: 10px;
@@ -91,22 +126,52 @@ img.caroussel:hover {
   transition: transform 1s, opacity 1s;
 }
 
-.carousel__cell:nth-child(9n + 1) {
-  background: hsla(0, 100%, 50%, 0.8);
+.carousel__cell:hover {
+  width: 600px;
+  height: 800px;
 }
-.carousel__cell:nth-child(9n + 2) {
-  background: hsla(40, 100%, 50%, 0.8);
+
+.carousel__cell-zoom {
+  transform: translateZ(500px);
+
+  /*   z-index: 3000; */
+  position: absolute;
+  width: 600px;
+  height: 800px;
+  /*  left: 10px;
+  top: 10px; */
+  border: 2px solid black;
+  line-height: 116px;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  transition: transform 1s, opacity 1s;
+
+  background: black;
 }
-.carousel__cell:nth-child(9n + 3) {
-  background: hsla(80, 100%, 50%, 0.8);
+
+.carousel__cell {
+  border: 3px solid white;
+  background: rgba(0, 0, 0, 0.8);
 }
-.carousel__cell:nth-child(9n + 4) {
-  background: hsla(120, 100%, 50%, 0.8);
+
+/* .carousel__cell:nth-child(5n + 1) {
+  background: var(--main1LightTrans);
 }
-.carousel__cell:nth-child(9n + 5) {
-  background: hsla(160, 100%, 50%, 0.8);
+.carousel__cell:nth-child(5n + 2) {
+  background: var(--main1DARKTrans);
 }
-.carousel__cell:nth-child(9n + 6) {
+.carousel__cell:nth-child(5n + 3) {
+  background: var(--main2LightTrans);
+}
+.carousel__cell:nth-child(5n + 4) {
+  background: var(--main2DARKTrans);
+}
+.carousel__cell:nth-child(5n + 5) {
+  background: var(--main3LightTrans);
+} */
+/* .carousel__cell:nth-child(9n + 6) {
   background: hsla(200, 100%, 50%, 0.8);
 }
 .carousel__cell:nth-child(9n + 7) {
@@ -117,26 +182,26 @@ img.caroussel:hover {
 }
 .carousel__cell:nth-child(9n + 0) {
   background: hsla(320, 100%, 50%, 0.8);
-}
+} */
 
 .carousel__cell:nth-child(1) {
-  transform: rotateY(0deg) translateZ(450px);
+  transform: rotateY(0deg) translateZ(300px);
 }
 .carousel__cell:nth-child(2) {
-  transform: rotateY(40deg) translateZ(450px);
+  transform: rotateY(90deg) translateZ(300px);
 }
 .carousel__cell:nth-child(3) {
-  transform: rotateY(80deg) translateZ(450px);
+  transform: rotateY(180deg) translateZ(300px);
 }
 .carousel__cell:nth-child(4) {
-  transform: rotateY(120deg) translateZ(450px);
+  transform: rotateY(270deg) translateZ(300px);
 }
 .carousel__cell:nth-child(5) {
-  transform: rotateY(160deg) translateZ(450px);
+  transform: rotateY(360deg) translateZ(300px);
 }
 .carousel__cell:nth-child(6) {
-  transform: rotateY(200deg) translateZ(450px);
-}
+  transform: rotateY(200deg) translateZ(400px);
+} /* 
 .carousel__cell:nth-child(7) {
   transform: rotateY(240deg) translateZ(450px);
 }
@@ -145,15 +210,21 @@ img.caroussel:hover {
 }
 .carousel__cell:nth-child(9) {
   transform: rotateY(320deg) translateZ(450px);
-}
+} */
 
 .carousel-options {
-  width: 150px;
+  width: 20vw;
   border-radius: 40px;
   text-align: center;
   position: relative;
   z-index: 2;
-  background: hsla(0, 0%, 100%, 0.8);
+
+  margin-bottom: 30px;
+}
+
+label {
+  display: flex;
+  gap: 10px;
 }
 
 input[type="range"].cells-range {
@@ -162,21 +233,242 @@ input[type="range"].cells-range {
   font: inherit; /* même rendu suivant font document */
   outline: none;
   color: rgb(
-    194,
-    215,
-    226
+    216,
+    22,
+    129
   ); /* sert pour couleur de référence, via currentColor, pour le curseur */
   opacity: 0.8;
-  background: #ccc; /* sert pour couleur de fond de la zone de déplacement */
+  background: rgb(
+    238,
+    226,
+    226,
+    0.8
+  ); /* sert pour couleur de fond de la zone de déplacement */
   box-sizing: border-box; /* même modèle de boîte pour tous */
+  border-radius: 40px;
   transition: opacity 0.2s;
   cursor: pointer;
+  height: 10px;
 }
 
 .hidden {
   display: none;
 }
 
+.image-carousel {
+  border-radius: 7px;
+  margin: 0px 7px 0px 7px;
+  height: 200px;
+  object-fit: fit;
+  box-shadow: 10px 13px 17px 12px rgba(24, 23, 23, 0.4);
+}
+
+.image-carousel img {
+  border-radius: 7px;
+}
+
+.icone-caroussel {
+  height: 30px;
+  gap: 10px;
+  margin: 10px 0px 30px 0px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--whiteTransp);
+  box-shadow: 1px 3px 7px 2px rgba(24, 23, 23, 0.4);
+}
+.icone-caroussel img {
+  display: flex;
+  align-items: flex-start;
+  width: 60px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.icone-caroussel2 img {
+  display: flex;
+  align-items: flex-start;
+  width: 30px;
+  height: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+a:hover {
+  color: var(--grey1);
+  cursor: pointer;
+}
+
+.link {
+  padding: 0 7px 20px 7px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+carousel-link-div {
+  width: 90%;
+  overflow-x: hidden;
+}
+
+.carousel-title {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+/* ------  LOADER --------------------------- */
+.loader-div {
+  position: relative;
+  border-radius: 5px;
+  /*  background-color: #ffebcd; */
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: block;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 10px solid var(--whiteTransp);
+  border-top-color: var(--main2DARK);
+  transform: rotate(-30deg);
+}
+
+.loader3 {
+  display: block;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: var(--main2DARK);
+  transform: rotate(-110deg);
+  animation: spin 1.5s linear 1;
+}
+
+.loader2 {
+  display: block;
+  position: relative;
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: var(--main1Light);
+  transform: rotate(-140deg);
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+
+  position: absolute;
+  border-radius: 50%;
+  border: 7px solid transparent;
+}
+
+.loader3::before,
+.loader3::after {
+  content: "";
+
+  position: absolute;
+  border-radius: 50%;
+  border: 7px solid transparent;
+}
+
+.loader2::before,
+.loader2::after {
+  content: "";
+
+  position: absolute;
+  border-radius: 50%;
+  border: 7px solid transparent;
+}
+
+.loader::before {
+  top: -49px;
+  left: -49px;
+  right: -49px;
+  bottom: -49px;
+  border-top-color: var(--main1DARK);
+  transform: rotate(-60deg);
+  animation: spin 1.5s linear 1;
+}
+
+.loader3::before {
+  top: -49px;
+  left: -49px;
+  right: -49px;
+  bottom: -49px;
+  border-top-color: var(--main1DARK);
+  transform: rotate(-60deg);
+  animation: spin 1.5s linear 1;
+}
+
+.loader2::before {
+  top: 11px;
+  left: 11px;
+  right: 11px;
+  bottom: 11px;
+  transform: rotate(10deg);
+  border-top-color: var(--main3Light);
+  animation: spin 1.5s linear 1;
+}
+
+.loader::after {
+  top: -28px;
+  left: -28px;
+  right: -28px;
+  bottom: -28px;
+  border-top-color: var(--main3DARK);
+  transform: rotate(-50deg);
+  /* animation: spin 1.5s linear 1; */
+}
+
+.loader3::after {
+  top: -28px;
+  left: -28px;
+  right: -28px;
+  bottom: -28px;
+  border-top-color: var(--main3DARK);
+  transform: rotate(-0deg);
+  /*  animation: spin 1.5s linear 1; */
+}
+
+.loader2::after {
+  top: 33px;
+  left: 33px;
+  right: 33px;
+  bottom: 33px;
+  border-top-color: var(--main2Light);
+  transform: rotate(20deg);
+
+  /*  animation: spin 1.5s linear 1; */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ------  Home --------------------------- */
+.loader-box {
+  width: 460px;
+  margin: auto;
+}
 /* ------  DARK MODE --------------------------- */
 
 @media (prefers-color-scheme: dark) {
@@ -196,8 +488,22 @@ input[type="range"].cells-range {
 /*------------------- Var ------------------ */
 :root {
   /* Color */
+  --main1Light: #ec7160;
+  --main1DARK: #e55438;
+  --main2Light: #00cdbc;
+  --main2DARK: #56aaa5;
+  --main3Light: #8c678e;
+  --main3DARK: #6b4a63;
 
-  --white: #dfdbdb;
+  --main1LightTrans: rgb(236, 113, 96, 0.8);
+  --main1DARKTrans: rgb(229, 84, 56, 0.8);
+  --main2LightTrans: rgb(0, 205, 188, 0.8);
+  --main2DARKTrans: rgb(86, 170, 165, 0.8);
+  --main3LightTrans: rgb(140, 103, 142, 0.8);
+  --main3DARKTrans: rgb(107, 74, 99, 0.8);
+
+  --white: rgb(223, 219, 219);
+  --whiteTransp: rgb(223, 219, 219, 0.6);
   --black: #000000;
   --grey1: #5e5e5e;
   --grey2: #919191;

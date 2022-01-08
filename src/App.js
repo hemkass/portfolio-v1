@@ -1,12 +1,12 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Caroussel from "./components/Caroussel";
+import Home from "./Home";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Caroussel />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </Router>
   );
