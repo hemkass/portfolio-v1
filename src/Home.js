@@ -4,17 +4,15 @@ import Background from "./components/HomeBackground";
 
 import { useState } from "react";
 
-import MonCV from "./MonCV";
+import MonCV from "./components/MonCV";
 import Caroussel from "./components/Caroussel";
+import Form from "./components/Form";
 
 const Home = () => {
-  const [modal, setModal] = useState(false);
+  /*  const [modal, setModal] = useState(false); */
   const [CV, setCV] = useState(false);
   const [carousel, setCarousel] = useState(false);
-
-  const handleClose = () => {
-    setModal(false);
-  };
+  const [form, setForm] = useState(false);
 
   /*   const handleOpen = () => {
     setModal(true);
@@ -28,12 +26,21 @@ const Home = () => {
     <div className="content">
       {CV && (
         <div>
-          <MonCV setCV={setCV} setCarousel={setCarousel} />
+          <MonCV setCV={setCV} setCarousel={setCarousel} setForm={setForm} />
         </div>
       )}
       {carousel && (
         <div>
-          <Caroussel setCarousel={setCarousel} setCV={setCV} />
+          <Caroussel
+            setCarousel={setCarousel}
+            setCV={setCV}
+            setForm={setForm}
+          />
+        </div>
+      )}
+      {form && (
+        <div>
+          <Form setCarousel={setCarousel} setCV={setCV} setForm={setForm} />
         </div>
       )}
 
@@ -46,13 +53,23 @@ const Home = () => {
         >
           <h1>My PORTFOLIO</h1>
         </div>
-        <div className="title1" onClick={handleCV}>
+        <div
+          className="title1"
+          onClick={() => {
+            setCV(true);
+          }}
+        >
           <h1>Curriculum Vitae</h1>
         </div>
         <div className="title2">
           <h3>My SKILLS</h3>
         </div>
-        <div className="title4" onClick={handleCV}>
+        <div
+          className="title4"
+          onClick={() => {
+            setForm(true);
+          }}
+        >
           <h1>Contact Me</h1>
         </div>
       </div>

@@ -3,7 +3,7 @@ import CarousselCard from "./Caroussel-Card";
 import carouselJson from "../Media/carousel.json";
 import Modal from "./modal";
 
-const Caroussel = ({ setCarousel, setCV }) => {
+const Caroussel = ({ setCarousel, setCV, setForm }) => {
   const [cellsRange, setCellsRange] = useState("4");
 
   let carousel = document.getElementsByClassName("carousel");
@@ -61,7 +61,7 @@ const Caroussel = ({ setCarousel, setCV }) => {
   console.log("test2", carouselJson);
   return (
     <div className="caroussel-global">
-      <Modal setCV={setCV} setCarousel={setCarousel}>
+      <Modal setCV={setCV} setCarousel={setCarousel} setForm={setForm}>
         <div className="caroussel-box">
           <div
             className="caroussel-left"
