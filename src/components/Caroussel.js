@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import CarousselCard from "./Caroussel-Card";
 import carouselJson from "../Media/carousel.json";
+import Modal from "./modal";
 
-const Caroussel = () => {
+const Caroussel = ({ setCarousel, setCV }) => {
   const [cellsRange, setCellsRange] = useState("4");
 
   let carousel = document.getElementsByClassName("carousel");
@@ -60,65 +61,67 @@ const Caroussel = () => {
   console.log("test2", carouselJson);
   return (
     <div className="caroussel-global">
-      <div className="caroussel-box">
-        <div
-          className="caroussel-left"
-          onClick={() => {
-            selectedIndex--;
-            changeCarousel();
-          }}
-        >
-          <img
-            className="caroussel"
-            src="https://res.cloudinary.com/dyj84szrx/image/upload/v1640876054/Mon%20site/BLACKprevious3_m5wc9o.png"
-            alt="next button"
-          ></img>
-        </div>
-        <div className="middle-content">
-          <div className="carousel-options">
-            <div>
-              <label>
-                <p>Nombre de faces :</p>
-                <input
-                  className="cells-range"
-                  type="range"
-                  min="3"
-                  max="5"
-                  value={cellsRange}
-                  onChange={(event) => {
-                    setCellsRange(event.target.value);
-
-                    changeCarousel();
-                  }}
-                />
-              </label>
-            </div>
-          </div>
+      <Modal setCV={setCV} setCarousel={setCarousel}>
+        <div className="caroussel-box">
           <div
-            className="scene"
-            onMouseMove={(event) => {
-              console.log(event);
+            className="caroussel-left"
+            onClick={() => {
+              selectedIndex--;
+              changeCarousel();
             }}
           >
-            <div className="carousel">
-              <CarousselCard />
+            <img
+              className="caroussel"
+              src="https://res.cloudinary.com/dyj84szrx/image/upload/v1640876054/Mon%20site/BLACKprevious3_m5wc9o.png"
+              alt="next button"
+            ></img>
+          </div>
+          <div className="middle-content">
+            <div className="carousel-options">
+              <div>
+                <label>
+                  <p>Nombre de faces :</p>
+                  <input
+                    className="cells-range"
+                    type="range"
+                    min="3"
+                    max="5"
+                    value={cellsRange}
+                    onChange={(event) => {
+                      setCellsRange(event.target.value);
+
+                      changeCarousel();
+                    }}
+                  />
+                </label>
+              </div>
+            </div>
+            <div
+              className="scene"
+              onMouseMove={(event) => {
+                console.log(event);
+              }}
+            >
+              <div className="carousel">
+                <CarousselCard />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div
-          className="caroussel-right"
-          onClick={() => {
-            selectedIndex++;
-            changeCarousel();
-          }}
-        >
-          <img
-            src="https://res.cloudinary.com/dyj84szrx/image/upload/v1640874930/Mon%20site/testnext_opiaml.png"
-            alt="next button"
-          ></img>
+          <div
+            className="caroussel-right"
+            onClick={() => {
+              selectedIndex++;
+              changeCarousel();
+            }}
+          >
+            <img
+              src="https://res.cloudinary.com/dyj84szrx/image/upload/v1640874930/Mon%20site/testnext_opiaml.png"
+              alt="next button"
+            ></img>
+          </div>
         </div>
-      </div>
+      </Modal>
     </div>
   );
 };

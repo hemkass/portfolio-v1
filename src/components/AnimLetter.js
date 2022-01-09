@@ -9,23 +9,21 @@ const AnimLetter = () => {
       <Anime
         type="button" // <------ Like this
         id="self"
-        style={{
+        className="self2"
+        /*     style={{
           top: 10,
 
-          /*   left: 100, */
           width: 610,
           height: 150,
           background: "#d5d5d5",
-        }}
+        }} */
+
         initial={[
           {
-            targets: "#self2",
-            height: "70px",
-            width: "500px",
-
-            /* translateX: 100,
-            translateY: 150, */
-            easing: "spring",
+            translateX: 150,
+            translateY: -50,
+            targets: "#self3",
+            color: "#5ba",
           },
         ]}
         _onClick={[
@@ -51,10 +49,11 @@ const AnimLetter = () => {
           {
             targets: "#self3",
             background: "#5ba",
+            color: "#000",
             easing: "easeInOutQuad",
             width: 300,
             translateX: 350,
-            translateY: 30,
+            translateY: 10,
             direction: "alternate",
           },
           {
@@ -81,7 +80,7 @@ const AnimLetter = () => {
           </h2>
         </div>
 
-        <div id="self3">
+        <div id="self3" className="self3">
           <h3>
             <span>FULL-STACK</span>
           </h3>
