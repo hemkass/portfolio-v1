@@ -1,8 +1,13 @@
 import Modal from "./modal";
-const MonCV = ({ setCV, setCarousel, setForm }) => {
+const MonCV = ({ setCV, setCarousel, setForm, setSkills }) => {
   return (
     <div>
-      <Modal setCV={setCV} setCarousel={setCarousel} setForm={setForm}>
+      <Modal
+        setCV={setCV}
+        setCarousel={setCarousel}
+        setForm={setForm}
+        setSkills
+      >
         <div>MonCV</div>
       </Modal>
     </div>

@@ -1,12 +1,11 @@
-import Caroussel from "../components/Caroussel";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Modal = ({ children, setCV, setCarousel, setForm }) => {
+const Modal = ({ children, setCV, setCarousel, setForm, setSkills }) => {
   const handleClose = () => {
     setCV(false);
     setCarousel(false);
     setForm(false);
+    setSkills(false);
   };
 
   return (

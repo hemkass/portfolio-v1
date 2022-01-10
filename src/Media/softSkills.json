@@ -1,0 +1,25 @@
+[
+  {
+    "ID": 1,
+    "TITLE": "RESOLUTION DE PROBLEMES",
+    "PICTURE": "https://res.cloudinary.com/dyj84szrx/image/upload/v1641841049/Mon%20site/PORTFOLIO/solving2_tbj3lg.png",
+    "description": " "
+  },
+  {
+    "ID": 2,
+    "TITLE": "CREATIVITE",
+    "PICTURE": "https://res.cloudinary.com/dyj84szrx/image/upload/v1641840936/Mon%20site/PORTFOLIO/creativity2_eihcb3.png",
+    "description": "Participation et animation d'ateliers autour de l'intelligence collective, de la gouvernance partagée et créative. Peintre digital et à l'encre."
+  },
+  {
+    "ID": 3,
+    "TITLE": "BIENVEILLANCE",
+    "PICTURE": "https://res.cloudinary.com/dyj84szrx/image/upload/v1641820779/bienveillance_mc48by.png",
+    "description": "Participation et animation d'ateliers autour des notions de bienveillance, de non-violence et d'écoute"
+  },
+  {
+    "ID": 4,
+    "TITLE": "FLEXIBILITE",
+    "PICTURE": "https://res.cloudinary.com/dyj84szrx/image/upload/v1641820779/flexible_vfiwcd.png"
+  }
+]

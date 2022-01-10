@@ -3,18 +3,18 @@ import CarousselCard from "./Caroussel-Card";
 import carouselJson from "../Media/carousel.json";
 import Modal from "./modal";
 
-const Caroussel = ({ setCarousel, setCV, setForm }) => {
+const Caroussel = ({ setCarousel, setCV, setForm, setSkills }) => {
   const [cellsRange, setCellsRange] = useState("4");
 
   let carousel = document.getElementsByClassName("carousel");
-  console.log("caroussel", carousel);
+  /* console.log("caroussel", carousel); */
 
   let cells = document.getElementsByClassName("carousel__cell");
   /*   console.log("cells", cells); */
   let cellCount;
   let selectedIndex = 0;
   let cellWidth = carousel[0]?.offsetWidth;
-  console.log("test", carousel[0]?.offsetWidth);
+  /* console.log("test", carousel[0]?.offsetWidth); */
   let cellHeight = carousel[0]?.offsetHeight;
 
   let rotateFn = "rotateY";
@@ -30,7 +30,7 @@ const Caroussel = ({ setCarousel, setCV, setForm }) => {
     theta = 360 / cellsRange;
     var cellSize = cellWidth;
     radius = Math.round(cellSize / 2 / Math.tan(Math.PI / cellsRange));
-    console.log("coucou " + cellWidth);
+    /* console.log("coucou " + cellWidth); */
 
     for (var i = 0; i < cells.length; i++) {
       /*  console.log("cells", cells[i]); */
@@ -61,7 +61,12 @@ const Caroussel = ({ setCarousel, setCV, setForm }) => {
   console.log("test2", carouselJson);
   return (
     <div className="caroussel-global">
-      <Modal setCV={setCV} setCarousel={setCarousel} setForm={setForm}>
+      <Modal
+        setSkills={setSkills}
+        setCV={setCV}
+        setCarousel={setCarousel}
+        setForm={setForm}
+      >
         <div className="caroussel-box">
           <div
             className="caroussel-left"
@@ -98,9 +103,9 @@ const Caroussel = ({ setCarousel, setCV, setForm }) => {
             </div>
             <div
               className="scene"
-              onMouseMove={(event) => {
+              /*   onMouseMove={(event) => {
                 console.log(event);
-              }}
+              }} */
             >
               <div className="carousel">
                 <CarousselCard />
