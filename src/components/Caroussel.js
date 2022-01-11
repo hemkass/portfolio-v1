@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import CarousselCard from "./Caroussel-Card";
-import carouselJson from "../Media/carousel.json";
+
 import Modal from "./modal";
 
 const Caroussel = ({ setCarousel, setCV, setForm, setSkills }) => {
@@ -11,11 +11,11 @@ const Caroussel = ({ setCarousel, setCV, setForm, setSkills }) => {
 
   let cells = document.getElementsByClassName("carousel__cell");
   /*   console.log("cells", cells); */
-  let cellCount;
+
   let selectedIndex = 0;
   let cellWidth = carousel[0]?.offsetWidth;
   /* console.log("test", carousel[0]?.offsetWidth); */
-  let cellHeight = carousel[0]?.offsetHeight;
+  /* let cellHeight = carousel[0]?.offsetHeight; */
 
   let rotateFn = "rotateY";
   let radius, theta;
@@ -26,7 +26,7 @@ const Caroussel = ({ setCarousel, setCV, setForm, setSkills }) => {
       "translateZ(" + -radius + "px) " + rotateFn + "(" + angle + "deg)";
   }
 
-  function changeCarousel() {
+  const changeCarousel = () => {
     theta = 360 / cellsRange;
     var cellSize = cellWidth;
     radius = Math.round(cellSize / 2 / Math.tan(Math.PI / cellsRange));
@@ -52,13 +52,14 @@ const Caroussel = ({ setCarousel, setCV, setForm, setSkills }) => {
     }
 
     rotateCarousel();
-  }
+  };
 
   useEffect(() => {
     setCellsRange(4);
-    changeCarousel();
+    changeCarousel(); // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log("test2", carouselJson);
+
+  /* console.log("test2", carouselJson); */
   return (
     <div className="caroussel-global">
       <Modal

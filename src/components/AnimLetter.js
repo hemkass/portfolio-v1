@@ -1,8 +1,7 @@
 import ReactAnime from "react-animejs";
-import { useState } from "react/cjs/react.development";
 
 const AnimLetter = () => {
-  const { Anime, stagger } = ReactAnime;
+  const { Anime } = ReactAnime;
 
   return (
     <div>

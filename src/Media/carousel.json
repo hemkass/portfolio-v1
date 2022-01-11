@@ -50,7 +50,7 @@
   {
     "ID": 4,
     "TITLE": "DELIVROO",
-    "FRONT": "add-to-cart-food.netlify.app",
+    "FRONT": "https://add-to-cart-food.netlify.app",
     "BACK": "",
     "TECHNOLOGIES": [
       { "name": "CSS" },

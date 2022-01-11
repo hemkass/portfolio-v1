@@ -3,7 +3,10 @@ const Background = () => {
     <div>
       <section>
         <div className="skewed">
-          <img src="https://res.cloudinary.com/dyj84szrx/image/upload/v1641731862/Mon%20site/IMG_3106_vm9ght.jpg"></img>
+          <img
+            alt="Arrière plan illustrant un voyage à vélo"
+            src="https://res.cloudinary.com/dyj84szrx/image/upload/v1641731862/Mon%20site/IMG_3106_vm9ght.jpg"
+          ></img>
         </div>
       </section>
       <section>
