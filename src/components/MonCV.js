@@ -6,7 +6,7 @@ const MonCV = ({ setCV, setCarousel, setForm, setSkills }) => {
         setCV={setCV}
         setCarousel={setCarousel}
         setForm={setForm}
-        setSkills
+        setSkills={setSkills}
       >
         <div>MonCV</div>
       </Modal>

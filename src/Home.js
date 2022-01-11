@@ -23,7 +23,12 @@ const Home = () => {
     <div className="content">
       {CV && (
         <div>
-          <MonCV setCV={setCV} setCarousel={setCarousel} setForm={setForm} />
+          <MonCV
+            setCV={setCV}
+            setCarousel={setCarousel}
+            setForm={setForm}
+            setSkills={setSkills}
+          />
         </div>
       )}
       {carousel && (
@@ -32,12 +37,18 @@ const Home = () => {
             setCarousel={setCarousel}
             setCV={setCV}
             setForm={setForm}
+            setSkills={setSkills}
           />
         </div>
       )}
       {form && (
         <div>
-          <Form setCarousel={setCarousel} setCV={setCV} setForm={setForm} />
+          <Form
+            setCarousel={setCarousel}
+            setCV={setCV}
+            setForm={setForm}
+            setSkills={setSkills}
+          />
         </div>
       )}
       {profil && (
