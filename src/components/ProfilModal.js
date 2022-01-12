@@ -18,7 +18,7 @@ const ProfilModal = ({ setProfil }) => {
           projets associatifs à "bidouiller" sur wordpress un peu de css/ Html.
           Même si être coordinatrice de projet en association avait du sens pour
           moi, j'ai petit à petit eu envie d'un métier plus technique. La
-          formation Bootcamp au Réacteur m'a permis de comfirmer mon choix, ce
+          formation Bootcamp au Réacteur m'a permis de confirmer mon choix, ce
           que j'aime c'est coder ...
         </p>
       </div>

@@ -7,6 +7,7 @@ body {
   height: 98vh;
   text-align: center;
   font-family: "Habibi", serif;
+  background-color: black;
 }
 
 h1 {
@@ -916,7 +917,7 @@ h4 {
 }
 /* ------  DARK MODE --------------------------- */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     background-color: black;
     color: var(--white);
@@ -929,7 +930,7 @@ h4 {
     color: var(--black);
   }
 }
-
+ */
 /*------------------- Var ------------------ */
 :root {
   /* Color */
