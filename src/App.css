@@ -937,6 +937,8 @@ form input::placeholder {
 /* ------  SKILLS  --------------------------- */
 
 .skills-box {
+  width: 100%;
+
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 50px;
@@ -1106,5 +1108,36 @@ h4 {
     margin-top: 50px;
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  /*  skills mobile  */
+  .soft-skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
+    overflow-x: hidden;
+  }
+
+  .soft-skill-div {
+    border-top: 1px dashed var(--grey1);
+    gap: 10px;
+    max-width: 40%;
+    margin-bottom: 50px;
+  }
+
+  .hard-skills-box {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .web-skills {
+    padding-bottom: 50px;
+    width: 40%;
+    border-right: none;
+    border-bottom: 1px solid var(--grey1);
   }
 }
