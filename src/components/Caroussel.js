@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import CarousselCard from "./Caroussel-Card";
+import Cube from "./cube";
 
 import Modal from "./modal";
 
@@ -102,12 +103,7 @@ const Caroussel = ({ setCarousel, setCV, setForm, setSkills }) => {
                 </label>
               </div>
             </div>
-            <div
-              className="scene"
-              /*   onMouseMove={(event) => {
-                console.log(event);
-              }} */
-            >
+            <div className="scene">
               <div className="carousel">
                 <CarousselCard />
               </div>
@@ -126,6 +122,36 @@ const Caroussel = ({ setCarousel, setCV, setForm, setSkills }) => {
               alt="next button"
             ></img>
           </div>
+        </div>{" "}
+        <div className="phone-caroussel-div">
+          <div
+            className="phone-caroussel-left"
+            onClick={() => {
+              selectedIndex--;
+              changeCarousel();
+            }}
+          >
+            <img
+              className="caroussel"
+              src="https://res.cloudinary.com/dyj84szrx/image/upload/v1640876054/Mon%20site/BLACKprevious3_m5wc9o.png"
+              alt="next button"
+            ></img>
+          </div>
+          <div
+            className="phone-caroussel-right"
+            onClick={() => {
+              selectedIndex++;
+              changeCarousel();
+            }}
+          >
+            <img
+              src="https://res.cloudinary.com/dyj84szrx/image/upload/v1640874930/Mon%20site/testnext_opiaml.png"
+              alt="next button"
+            ></img>
+          </div>{" "}
+        </div>{" "}
+        <div className="mobile-Cube">
+          <Cube />
         </div>
       </Modal>
     </div>
