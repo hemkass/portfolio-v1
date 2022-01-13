@@ -68,14 +68,14 @@ img {
 
 /* ..........cube ............................... */
 
-.scene-cube {
+/* .scene-cube {
   width: 10%;
   height: 200px;
   perspective: 500px;
-}
+} */
 
 .cube {
-  width: 100%;
+  width: 80%;
   height: 500px;
   position: relative;
   transform-style: preserve-3d;
@@ -83,52 +83,52 @@ img {
 
 .cube__face {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
 }
 
 .cube__face--front {
   background-color: #e55438;
-  transform: rotateY(0deg) translateZ(250px);
+  transform: rotateY(0deg) translateZ(200px);
 }
 .cube__face--right {
   background-color: #d4e538;
-  transform: rotateY(90deg) translateZ(250px);
+  transform: rotateY(90deg) translateZ(200px);
 }
 .cube__face--back {
   background-color: #5838e5;
-  transform: rotateY(180deg) translateZ(250px);
+  transform: rotateY(180deg) translateZ(200px);
 }
 .cube__face--left {
   background-color: #e5389d;
-  transform: rotateY(-90deg) translateZ(250px);
+  transform: rotateY(-90deg) translateZ(200px);
 }
 .cube__face--top {
   background-color: #f70e2d;
-  transform: rotateX(90deg) translateZ(250px);
+  transform: rotateX(90deg) translateZ(200px);
 }
 .cube__face--bottom {
   background-color: #38c2e5;
-  transform: rotateX(-90deg) translateZ(250px);
+  transform: rotateX(-90deg) translateZ(200px);
 }
 
 .cube.show-front {
-  transform: translateZ(-100px) rotateY(0deg);
+  transform: translateZ(-200px) rotateY(0deg);
 }
 .cube.show-right {
-  transform: translateZ(-100px) rotateY(-90deg) translateX(-250px);
+  transform: translateZ(-200px) rotateY(-90deg) translateX(50px);
 }
 .cube.show-back {
-  transform: translateZ(-100px) rotateY(-180deg) translateX(-150px);
+  transform: translateZ(-200px) rotateY(-180deg) translateX(-180px);
 }
 .cube.show-left {
-  transform: translateZ(-100px) rotateY(90deg) translateX(250px);
+  transform: translateZ(-250px) rotateY(90deg) translateX(-150px);
 }
 .cube.show-top {
-  transform: translateZ(-100px) rotateX(-90deg);
+  transform: translateZ(-250px) rotateX(-90deg);
 }
 .cube.show-bottom {
-  transform: translateZ(-100px) rotateX(90deg) translateX(-100px);
+  transform: translateZ(-250px) rotateX(90deg) translateX(0px);
 }
 
 .cube {
@@ -138,7 +138,11 @@ img {
 }
 
 /* --------------------  Carousel / caroussel  */
-.mobile-Cube {
+/* .mobile-Cube {
+  display: none;
+} */
+
+.mobile-slider {
   display: none;
 }
 
@@ -675,7 +679,7 @@ carousel-link-div {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: 10;
   left: 0;
   width: 100%;
   height: 100%;
@@ -730,6 +734,7 @@ carousel-link-div {
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
 }
 
 .modal-content-profil {
@@ -786,6 +791,7 @@ carousel-link-div {
   background-color: rgb(0, 0, 0);
   box-shadow: 20px -20px 50px 10px rgba(103, 103, 107, 0.3);
   border-radius: 7px;
+  overflow: hidden;
 }
 
 .closebutton {
@@ -1099,9 +1105,14 @@ h4 {
   }
 
   .others-contacts {
+    padding: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    border-right: none;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px white dashed;
   }
 
   .form-box {
@@ -1111,6 +1122,11 @@ h4 {
   }
 
   /*  skills mobile  */
+
+  .modal-content {
+    overflow-y: scroll;
+  }
+
   .soft-skills-content {
     display: flex;
     flex-wrap: wrap;
@@ -1139,5 +1155,48 @@ h4 {
     width: 40%;
     border-right: none;
     border-bottom: 1px solid var(--grey1);
+  }
+
+  .loader-box {
+    transform: scale(0.5) translateY(-700px) translateX(-200px);
+  }
+
+  .menu {
+    transform: scale(0.9) translateY(-50px) translateX(50px);
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slider-box {
+    width: 90%;
+    overflow: hidden;
+    scroll-snap-type: y mandatory;
+
+    /*     display: flex;
+    gap: 150px; */
+  }
+
+  .sliderPicture {
+    object-fit: fit;
+    width: 100%;
+    height: 200px;
+  }
+
+  .slider-div {
+    scroll-snap-align: center;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    margin-bottom: 100px;
+
+    box-shadow: inset 0 0 30px rgb(196, 196, 206, 0.4),
+      0px 0px 50px 20px rgba(8, 8, 8, 0.4);
   }
 }

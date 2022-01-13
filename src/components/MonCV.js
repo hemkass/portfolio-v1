@@ -1,4 +1,5 @@
 import Modal from "./modal";
+import Sliders from "./sliders";
 
 const MonCV = ({ setCV, setCarousel, setForm, setSkills }) => {
   return (
@@ -9,7 +10,7 @@ const MonCV = ({ setCV, setCarousel, setForm, setSkills }) => {
         setForm={setForm}
         setSkills={setSkills}
       >
-        <div></div>
+        <div>EN cours</div>
       </Modal>
     </div>
   );

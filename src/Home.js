@@ -56,7 +56,6 @@ const Home = () => {
           <ProfilModal setProfil={setProfil} />
         </div>
       )}
-
       {skills && (
         <div>
           <Skills
@@ -67,6 +66,7 @@ const Home = () => {
           />
         </div>
       )}
+
       <div className="menu">
         <Menu
           setSkills={setSkills}
@@ -75,7 +75,6 @@ const Home = () => {
           setForm={setForm}
         />{" "}
       </div>
-
       <div className="titleBox">
         <div className="loader-box">
           <div>

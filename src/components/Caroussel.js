@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import CarousselCard from "./Caroussel-Card";
-import Cube from "./cube";
+/* import Cube from "./cube"; */
+import Sliders from "./sliders";
 
 import Modal from "./modal";
 
@@ -150,9 +151,12 @@ const Caroussel = ({ setCarousel, setCV, setForm, setSkills }) => {
             ></img>
           </div>{" "}
         </div>{" "}
-        <div className="mobile-Cube">
+        <div className="mobile-slider">
+          <Sliders />
+        </div>{" "}
+        {/*   <div className="mobile-Cube">
           <Cube />
-        </div>
+        </div> */}
       </Modal>
     </div>
   );

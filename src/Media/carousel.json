@@ -2,6 +2,7 @@
   {
     "ID": 1,
     "TITLE": "GAMEPAD",
+    "SUBTITLE": "réplique",
     "FRONT": "https://my-gamepad.netlify.app/",
     "BACK": "https://github.com/hemkass/Gamepad-backend",
     "TECHNOLOGIES": [
@@ -18,6 +19,7 @@
   {
     "ID": 2,
     "TITLE": "VINTED",
+    "SUBTITLE": "réplique",
     "FRONT": "https://my-vinted-app.netlify.app/",
     "BACK": "https://github.com/hemkass/myVintedApp",
     "TECHNOLOGIES": [
@@ -34,6 +36,7 @@
   {
     "ID": 3,
     "TITLE": "MARVEL",
+
     "FRONT": "https://my-marvel-app.netlify.app/",
     "BACK": "https://github.com/hemkass/MarvelBack",
     "TECHNOLOGIES": [
@@ -50,6 +53,7 @@
   {
     "ID": 4,
     "TITLE": "DELIVROO",
+    "SUBTITLE": "réplique",
     "FRONT": "https://add-to-cart-food.netlify.app",
     "BACK": "",
     "TECHNOLOGIES": [
@@ -64,6 +68,7 @@
   {
     "ID": 5,
     "TITLE": "TRIP ADVISOR",
+    "SUBTITLE": "réplique",
     "FRONT": "https://my-trip-adv.netlify.app/",
     "BACK": "https://github.com/hemkass/TripAdvisor-back-end",
     "TECHNOLOGIES": [
