@@ -10,7 +10,12 @@ const MonCV = ({ setCV, setCarousel, setForm, setSkills }) => {
         setForm={setForm}
         setSkills={setSkills}
       >
-        <div>EN cours</div>
+        <div>
+          <img
+            alt=""
+            src="https://res.cloudinary.com/dyj84szrx/image/upload/v1642068251/Mon%20site/marineCorbel-CV_wj9o2l.png"
+          />
+        </div>
       </Modal>
     </div>
   );
