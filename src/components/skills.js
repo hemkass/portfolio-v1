@@ -2,7 +2,7 @@ import Modal from "./modal";
 import softSkills from "../Media/softSkills.json";
 import skills from "../Media/skills.json";
 
-const Skills = ({ setCV, setCarousel, setForm, setSkills }) => {
+const Skills = ({ /* setCV, */ setCarousel, setForm, setSkills }) => {
   const key1 = Object.keys(skills[0]);
 
   const key2 = Object.keys(skills[1]);
@@ -11,7 +11,7 @@ const Skills = ({ setCV, setCarousel, setForm, setSkills }) => {
     <div>
       <Modal
         setSkills={setSkills}
-        setCV={setCV}
+        /*    setCV={setCV} */
         setCarousel={setCarousel}
         setForm={setForm}
       >

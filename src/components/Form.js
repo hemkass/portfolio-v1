@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from "./modal";
 import axios from "axios";
 
-const Form = ({ setCV, setCarousel, setForm, setSkills }) => {
+const Form = ({ /*  setCV, */ setCarousel, setForm, setSkills }) => {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
@@ -32,7 +32,7 @@ const Form = ({ setCV, setCarousel, setForm, setSkills }) => {
     <div className="global-contact-div">
       <Modal
         setSkills={setSkills}
-        setCV={setCV}
+        /*    setCV={setCV} */
         setCarousel={setCarousel}
         setForm={setForm}
       >

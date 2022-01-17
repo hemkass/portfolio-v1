@@ -4,7 +4,6 @@ import Background from "./components/HomeBackground";
 
 import { useState } from "react";
 
-import MonCV from "./components/MonCV";
 import Caroussel from "./components/Caroussel";
 import Form from "./components/Form";
 import Skills from "./components/skills";
@@ -12,14 +11,13 @@ import ProfilModal from "./components/ProfilModal";
 import Menu from "./components/Menu";
 
 const Home = () => {
-  /*  const [modal, setModal] = useState(false); */
-  const [CV, setCV] = useState(false);
+  /*  const [CV, setCV] = useState(false); */
   const [carousel, setCarousel] = useState(false);
   const [form, setForm] = useState(false);
   const [skills, setSkills] = useState(false);
   const [profil, setProfil] = useState(false);
 
-  const [langue, setLangue] = useState("FR");
+  /*   const [langue, setLangue] = useState("FR"); */
 
   return (
     <div className="content">
@@ -37,7 +35,7 @@ const Home = () => {
         <div>
           <Caroussel
             setCarousel={setCarousel}
-            setCV={setCV}
+            /*  setCV={setCV} */
             setForm={setForm}
             setSkills={setSkills}
             langue={langue}
@@ -48,7 +46,7 @@ const Home = () => {
         <div>
           <Form
             setCarousel={setCarousel}
-            setCV={setCV}
+            /*  setCV={setCV} */
             setForm={setForm}
             setSkills={setSkills}
           />
@@ -63,7 +61,7 @@ const Home = () => {
         <div>
           <Skills
             setCarousel={setCarousel}
-            setCV={setCV}
+            /*  setCV={setCV} */
             setForm={setForm}
             setSkills={setSkills}
           />
@@ -73,7 +71,7 @@ const Home = () => {
       <div className="menu">
         <Menu
           setSkills={setSkills}
-          setCV={setCV}
+          /* setCV={setCV} */
           setCarousel={setCarousel}
           setForm={setForm}
         />{" "}

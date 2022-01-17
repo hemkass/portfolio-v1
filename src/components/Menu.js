@@ -1,4 +1,4 @@
-const Menu = ({ setCV, setCarousel, setForm, setSkills }) => {
+const Menu = ({ /* setCV, */ setCarousel, setForm, setSkills }) => {
   return (
     <>
       <div

@@ -5,7 +5,12 @@ import Sliders from "./sliders";
 
 import Modal from "./modal";
 
-const Caroussel = ({ setCarousel, setCV, setForm, setSkills, langue }) => {
+const Caroussel = ({
+  setCarousel,
+  /* setCV, */ setForm,
+  setSkills,
+  langue,
+}) => {
   const [cellsRange, setCellsRange] = useState("4");
 
   let carousel = document.getElementsByClassName("carousel");

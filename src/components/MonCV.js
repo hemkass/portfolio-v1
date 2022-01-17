@@ -1,11 +1,10 @@
 import Modal from "./modal";
-import Sliders from "./sliders";
 
-const MonCV = ({ setCV, setCarousel, setForm, setSkills }) => {
+const MonCV = ({ /* setCV,  */ setCarousel, setForm, setSkills }) => {
   return (
     <div>
       <Modal
-        setCV={setCV}
+        /* setCV={setCV} */
         setCarousel={setCarousel}
         setForm={setForm}
         setSkills={setSkills}

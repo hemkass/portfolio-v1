@@ -1,5 +1,3 @@
-import carousel from "../Media/carousel.json";
-
 const IconeCarousel = ({ elem }) => {
   return (
     <div className="icone-caroussel">
