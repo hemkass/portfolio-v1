@@ -36,7 +36,7 @@
   {
     "ID": 3,
     "TITLE": "MARVEL",
-
+    "SUBTITLE": "",
     "FRONT": "https://my-marvel-app.netlify.app/",
     "BACK": "https://github.com/hemkass/MarvelBack",
     "TECHNOLOGIES": [

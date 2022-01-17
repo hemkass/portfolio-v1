@@ -17,6 +17,7 @@ const CarousselCard = () => {
         return (
           <div key={index} id={`card${elem.ID}`} className="carousel__cell">
             <div className="carousel-title">
+              {" "}
               <h1>{elem.TITLE}</h1>
               {elem.SUBTITLE && <p>({elem.SUBTITLE})</p>}
             </div>

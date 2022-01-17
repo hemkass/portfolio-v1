@@ -19,9 +19,11 @@ const Home = () => {
   const [skills, setSkills] = useState(false);
   const [profil, setProfil] = useState(false);
 
+  const [langue, setLangue] = useState("FR");
+
   return (
     <div className="content">
-      {CV && (
+      {/*     {CV && (
         <div>
           <MonCV
             setCV={setCV}
@@ -30,7 +32,7 @@ const Home = () => {
             setSkills={setSkills}
           />
         </div>
-      )}
+      )} */}
       {carousel && (
         <div>
           <Caroussel
@@ -38,6 +40,7 @@ const Home = () => {
             setCV={setCV}
             setForm={setForm}
             setSkills={setSkills}
+            langue={langue}
           />
         </div>
       )}
