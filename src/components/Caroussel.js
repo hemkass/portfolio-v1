@@ -9,7 +9,7 @@ const Caroussel = ({
   setCarousel,
   /* setCV, */ setForm,
   setSkills,
-  langue,
+  /* langue, */
 }) => {
   const [cellsRange, setCellsRange] = useState("4");
 
@@ -71,7 +71,7 @@ const Caroussel = ({
     <div className="caroussel-global">
       <Modal
         setSkills={setSkills}
-        setCV={setCV}
+        /*   setCV={setCV} */
         setCarousel={setCarousel}
         setForm={setForm}
       >

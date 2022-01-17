@@ -38,7 +38,7 @@ const Home = () => {
             /*  setCV={setCV} */
             setForm={setForm}
             setSkills={setSkills}
-            langue={langue}
+            /*  langue={langue} */
           />
         </div>
       )}
